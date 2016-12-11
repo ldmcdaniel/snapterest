@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ldmcdaniel/snapterest/issues"
   },
-  "homepage": "https://github.com/ldmcdaniel/snapterest#readme"
+  "homepage": "https://github.com/ldmcdaniel/snapterest#readme",
+  "devDependencies": {
+    "browserify": "^13.1.1"
+  }
 }
