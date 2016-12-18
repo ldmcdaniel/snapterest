@@ -4,9 +4,7 @@ var ReactDOM = require('react-dom');
 var ReactClass = React.createClass({
   getInitialState: function () {
     return {
-      isHeaderHidden: false,
-      title: 'Stateful React Component',
-      phrase: 'that turns on or off'
+      isHeaderHidden: false
     };
   },
 
@@ -20,11 +18,11 @@ var ReactClass = React.createClass({
     var headerElementOn = React.createElement('h1', {
       className: 'header',
       key: 'header'
-    }, this.state.title);
+    }, 'Stateful React Component');
     var headerElementOff = React.createElement('h1', {
       className: 'header',
       key: 'header'
-    }, this.state.phrase);
+    }, 'that turns on or off');
     var buttonElement = React.createElement('button', {
       className: 'btn btn-default',
       onClick: this.handleClick,
