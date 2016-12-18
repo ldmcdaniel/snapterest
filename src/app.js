@@ -5,7 +5,8 @@ var ReactClass = React.createClass({
   getInitialState: function () {
     return {
       isHeaderHidden: false,
-      title: 'Stateful React Component'
+      title: 'Stateful React Component',
+      phrase: 'that turns on or off'
     };
   },
 
@@ -16,17 +17,22 @@ var ReactClass = React.createClass({
   },
 
   render: function () {
-    var headerElement = React.createElement('h1', {
-      classNsme: 'header', key: 'header'
+    var headerElementOn = React.createElement('h1', {
+      className: 'header',
+      key: 'header'
     }, this.state.title);
+    var headerElementOff = React.createElement('h1', {
+      className: 'header',
+      key: 'header'
+    }, this.state.phrase);
     var buttonElement = React.createElement('button', {
       className: 'btn btn-default',
       onClick: this.handleClick,
       key: 'button'
     }, 'Toggle header');
     return this.state.isHeaderHidden ?
-      React.createElement('div', null, [ buttonElement]) :
-      React.createElement('div', null, [ buttonElement, headerElement ]);
+      React.createElement('div', null, [ buttonElement, headerElementOff]) :
+      React.createElement('div', null, [ buttonElement, headerElementOn ]);
   },
 });
 
