@@ -24,11 +24,9 @@ var ReactClass = React.createClass({
       onClick: this.handleClick,
       key: 'button'
     }, 'Toggle header');
-    if (this.state.isHeaderHidden) {
-      return React.createElement('div', null, [ buttonElement]);
-    }
-
-    return React.createElement('div', null, [ buttonElement, headerElement ]);
+    return this.state.isHeaderHidden ?
+      React.createElement('div', null, [ buttonElement]) :
+      React.createElement('div', null, [ buttonElement, headerElement ]);
   },
 });
 
